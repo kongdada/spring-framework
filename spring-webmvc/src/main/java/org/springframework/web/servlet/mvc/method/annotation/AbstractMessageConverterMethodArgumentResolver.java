@@ -77,10 +77,13 @@ public abstract class AbstractMessageConverterMethodArgumentResolver implements 
 
 	protected final Log logger = LogFactory.getLog(getClass());
 
+	// kk 处理消息的HttpMessageConverter
 	protected final List<HttpMessageConverter<?>> messageConverters;
 
+	// kk 所有支持的mediaTypes
 	protected final List<MediaType> allSupportedMediaTypes;
 
+	// kk 拦截器链
 	private final RequestResponseBodyAdviceChain advice;
 
 
